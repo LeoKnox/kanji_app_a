@@ -1,3 +1,13 @@
 body {
     background-color: lightgoldenrodyellow;
 }
+
+.nav_ul {
+    list-style-type: none;
+}
+
+.nav_li {
+    display: inline;
+    margin: 5px;
+}
+
