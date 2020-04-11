@@ -7,7 +7,13 @@ body {
 }
 
 .nav_li {
+    padding: 8px 12px;
+    border: 2px solid darkblue;
+    background-color: darkgoldenrod;
     display: inline;
-    margin: 5px;
+    margin: 0px;
 }
 
+.nav_a {
+    text-decoration: none;
+}
