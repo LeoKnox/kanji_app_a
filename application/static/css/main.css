@@ -2,18 +2,26 @@ body {
     background-color: lightgoldenrodyellow;
 }
 
+.nav_div {
+    background: blue;
+    height: 2.4em;
+}
+
 .nav_ul {
     list-style-type: none;
 }
 
 .nav_li {
     padding: 8px 12px;
+    margin: 0px;
     border: 2px solid darkblue;
     background-color: darkgoldenrod;
+    border-radius: 7px;
     display: inline;
-    margin: 0px;
 }
 
 .nav_a {
+    font-weight: bold;
+    color: lightgoldenrodyellow;
     text-decoration: none;
 }
