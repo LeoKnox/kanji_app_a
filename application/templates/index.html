@@ -3,14 +3,12 @@
 {% block content %}
 <h1>Kanji Drawing App</h1>
 <dl>
-    {% for kd in kanjiData %}
-        <dt>Kanji</dt>
-        <dd>{{ kd.kanji }}</dd>
-        <dt>Translation</dt>
-        <dd>{{ kd.translation }}</dd>
-        <dt>Pronunciation</dt>
-        <dd>{{ kd.pronunciation }}</dd>
-    {% endfor %}
+    <dt>Kanji</dt>
+    <dd>{{ kanjiData.kanji }}</dd>
+    <dt>Translation</dt>
+    <dd>{{ kanjiData.translation }}</dd>
+    <dt>Pronunciation</dt>
+    <dd>{{ kanjiData.pronunciation }}</dd>
 </dl>
 
 <p>Kanji flash-cards and writing practice</p>
