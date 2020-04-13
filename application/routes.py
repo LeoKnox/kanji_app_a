@@ -4,7 +4,8 @@ from flask import render_template
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    kanjiData = [{"translation":"1","kanji":"一","pronunciation":"ICHI, ITSU"}]
+    return render_template("index.html", kanjiData=kanjiData)
 
 @app.route("/about")
 def about():
