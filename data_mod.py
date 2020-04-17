@@ -1,4 +1,5 @@
-with open('test_data.csv', 'r', encoding="utf8") as f:
+#with open('test_data.csv', 'r', encoding="utf8") as f:
+with open('List-of-1000-Kanji-converted2.csv', 'r', encoding="utf8") as f:
     f.readline()
     i = 0
     arr=[]
@@ -22,4 +23,6 @@ with open('test_data.csv', 'r', encoding="utf8") as f:
         }
         db_data.append(item)
     #db_data = {"translate":arr[0][0]}
-    print (db_data)
+    #print (db_data)
+    f2 = open('kanji_db.csv', 'x')
+    f2.write(db_data)
