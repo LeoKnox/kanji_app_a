@@ -15,6 +15,9 @@ class head:
     
     def addEnd(self, newVal):
         newNode = node(newVal)
+        if self.head == None:
+            self.head = newNode
+            return
         temp = self.head
         while (temp.next):
             temp = temp.next
@@ -27,6 +30,7 @@ class node:
 
 print("start here")
 l_one = head()
+l_one.addEnd("y")
 l_one.addNode("t")
 l_one.addNode("s")
 l_one.addEnd("y")
