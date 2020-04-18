@@ -22,6 +22,14 @@ class head:
         while (temp.next):
             temp = temp.next
         temp.next = newNode
+    
+    def addMid(self, newVal, keyVal):
+        temp = self.head
+        while (temp.val != keyVal):
+            temp = temp.next
+        newNode = node(newVal)
+        newNode.next = temp.next
+        temp.next = newNode
 
 class node:
     def __init__(self, val):
@@ -30,10 +38,11 @@ class node:
 
 print("start here")
 l_one = head()
-l_one.addEnd("y")
+l_one.addEnd("l")
 l_one.addNode("t")
 l_one.addNode("s")
 l_one.addEnd("y")
+l_one.addMid("a", "l")
 l_one.printList()
 #temp = head()
 #l_one.head = node("t")
