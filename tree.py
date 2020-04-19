@@ -3,15 +3,17 @@ class tree:
         self.head = None
     
     def recNode(self, term):
-        if self.head == term:
-            return True
-        elif self.head == None:
-            return False
-        else:
-            if temp > term and temp.val:
-                recNode(temp.left)
+        if term < self.head.info:
+            if self.head.left is None:
+                self.head.left = Node(data)
             else:
-                recNode(temp.right)
+                self.head.left.recNode(data)
+        elif term < self.head.info:
+            if self.head.right is None:
+                self.head.right= Node(data)
+            else:
+                self.head.right.recNode(data)
+    
     
     def findNode(self, term):
         if self.head == None:
@@ -36,7 +38,6 @@ class tree:
             else:
                 temp.right = newNode
                 return
-            
 
 class node:
     def __init__(self, info):
@@ -49,5 +50,8 @@ t.add_node(7)
 t.add_node(3)
 t.add_node(9)
 t.add_node(1)
+t.recNode(8)
+n = node(5)
 print (t.head.right.info)
-print (t.recNode(3))
+
+print (n.info)
