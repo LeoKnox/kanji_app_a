@@ -15,8 +15,16 @@ class tree:
             self.head = newNode
             return
         temp = self.head
-        if info < temp.info:
-            temp.left = newNode
+        while temp != None:
+            if info < temp.info:
+                if temp.left == None:
+                    temp.left = newNode
+                else:
+                    temp = temp.left
+                    return
+            else:
+                temp.right = newNode
+                return
             
 
 class node:
@@ -28,5 +36,7 @@ class node:
 t = tree()
 t.add_node(7)
 t.add_node(3)
-print (t.head.left.info)
-print (t.findNode(7))
+t.add_node(9)
+t.add_node(1)
+print (t.head.right.info)
+print (t.findNode(3))
