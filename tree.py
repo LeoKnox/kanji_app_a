@@ -2,6 +2,17 @@ class tree:
     def __init__(self):
         self.head = None
     
+    def recNode(self, term):
+        if self.head == term:
+            return True
+        elif self.head == None:
+            return False
+        else:
+            if temp > term and temp.val:
+                recNode(temp.left)
+            else:
+                recNode(temp.right)
+    
     def findNode(self, term):
         if self.head == None:
             return False
@@ -39,4 +50,4 @@ t.add_node(3)
 t.add_node(9)
 t.add_node(1)
 print (t.head.right.info)
-print (t.findNode(3))
+print (t.recNode(3))
