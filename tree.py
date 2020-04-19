@@ -7,6 +7,10 @@ class tree:
         if self.head == None:
             self.head = newNode
             return
+        temp = self.head
+        if info < temp.info:
+            temp.left = newNode
+            
 
 class node:
     def __init__(self, info):
@@ -15,5 +19,6 @@ class node:
         self.left = None
 
 t = tree()
+t.add_node(7)
 t.add_node(3)
-print (t.head.info)
+print (t.head.left.info)
