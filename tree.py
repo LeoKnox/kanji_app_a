@@ -4,6 +4,22 @@ class Tree:
         self.right = None
         self.info = info
     
+    def delNode(self, info):
+        if self.info == info:
+            print('equal')
+            if self.left:
+                print('a')
+                self.left.delNode(self.info)
+            elif self.right:
+                print('aa')
+                self.right.delNode(self.info)
+            else:
+                print('d')
+                self.left = None
+                self.right = None
+                self.info = None
+                        
+    
     def addNode(self, info):
         if self.info:
             if info < self.info:
@@ -25,10 +41,9 @@ class Tree:
             self.right.traceTree()
 
 t = Tree(7)
-t.addNode(4)
-t.addNode(7)
 t.addNode(8)
-t.addNode(5)
-t.addNode(7)
-t.addNode(4)
+t.addNode(3)
+t.traceTree()
+t.delNode(3)
+print('99999')
 t.traceTree()
