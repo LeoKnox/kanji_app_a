@@ -7,18 +7,20 @@ class Tree:
     def delNode(self, info):
         if self.info == info:
             print('equal')
-            if self.left:
+            if not self.left and self.right:
                 print('a')
-                self.left.delNode(self.info)
+                self.left = None
+                self.right = None
+                self.info = None
             elif self.right:
                 print('aa')
                 self.right.delNode(self.info)
             else:
                 print('d')
-                self.left = None
-                self.right = None
-                self.info = None
-                        
+        elif info <= self.info:
+            self.left.delNode(self.info)
+        elif info > self.info:
+            self.right.delNode(self.info)
     
     def addNode(self, info):
         if self.info:
@@ -44,6 +46,6 @@ t = Tree(7)
 t.addNode(8)
 t.addNode(3)
 t.traceTree()
-t.delNode(3)
+t.delNode(7)
 print('99999')
 t.traceTree()
