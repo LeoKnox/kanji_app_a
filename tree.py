@@ -18,11 +18,17 @@ class Tree:
                     self.right.addNode(info)
     
     def traceTree(self):
-        print(self.info)
+        if self.left:
+            self.left.traceTree()
+        print( self.info),
+        if self.right:
+            self.right.traceTree()
 
 t = Tree(7)
-t.addNode(7)
 t.addNode(4)
+t.addNode(7)
 t.addNode(8)
 t.addNode(5)
+t.addNode(7)
+t.addNode(4)
 t.traceTree()
